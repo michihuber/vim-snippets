@@ -903,15 +903,15 @@ snippet tctss
 #     Rspec snippets     #
 ##########################
 snippet desc
-	describe ${1:class_name} do
+	describe ${1} do
 		${0}
 	end
 snippet descm
-	describe "${1:#method}" do
-		${0:pending "Not implemented"}
+	describe "#${1}" do
+		${0}
 	end
 snippet cont
-	context "${1:message}" do
+	context "when ${1}" do
 		${0}
 	end
 snippet bef
@@ -923,11 +923,11 @@ snippet aft
 		${0}
 	end
 snippet let
-	let(:${1:object}) ${0}
+	let(:${1}) { ${0} }
 snippet let!
 	let!(:${1:object}) ${0}
 snippet subj
-	subject { ${0} }
+	subject(:${1}) { ${0} }
 snippet s.
 	subject.${0:method}
 snippet spec
@@ -941,7 +941,7 @@ snippet shared
 snippet ibl
 	it_behaves_like ${0:"shared examples name"}
 snippet it
-	it "${1:spec_name}" do
+	it "${1}" do
 		${0}
 	end
 snippet its
