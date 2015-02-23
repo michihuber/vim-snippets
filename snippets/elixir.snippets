@@ -43,34 +43,38 @@ snippet cond
 	${1} ->
 		${0}
 	end
-
 snippet case
 	case ${1} do
 	${2} ->
 		${0}
 	end
-
+snippet df
+	def ${1:name}, do: ${2}
 snippet def
 	def ${1} do
 		${0}
 	end
 snippet def:
 	def ${1}, do: ${0}
+snippet defd
+	@doc """
+	${1}
+	"""
+	def ${2} do
+		${0}
+	end
 snippet defim
 	defimpl ${1}, for: ${2} do
 		${0}
 	end
-
 snippet defma
 	defmacro ${1} do
 		${0}
 	end
-
 snippet defmo
 	defmodule ${1} do
 		${0}
 	end
-
 snippet defp
 	defp ${1} do
 		${0}
@@ -95,13 +99,11 @@ snippet mdoc
 	@moduledoc """
 	${0}
 	"""
-
 snippet rec
 	receive do
 	${1} ->
 		${0}
 	end
-
 snippet req
 	require ${0}
 
@@ -121,3 +123,6 @@ snippet try try .. rescue .. end
 	rescue
 		${2} -> ${0}
 	end
+snippet pry
+	require IEx; IEx.pry
+	$0
