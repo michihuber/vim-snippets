@@ -40,13 +40,13 @@ snippet unlesse unless .. do: .. else:
 
 snippet cond
 	cond do
-	${1} ->
-		${0}
+		${1} ->
+			${0}
 	end
 snippet case
 	case ${1} do
-	${2} ->
-		${0}
+		${2} ->
+			${0}
 	end
 snippet df
 	def ${1:name}, do: ${2}
@@ -125,4 +125,4 @@ snippet try try .. rescue .. end
 	end
 snippet pry
 	require IEx; IEx.pry
-	$0
+	${0}
