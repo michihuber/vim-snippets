@@ -6,7 +6,8 @@ snippet defm
 snippet defmm
 	(defmulti ${1:name} ${0:dispatch-fn})
 snippet defma
-	(defmacro ${1:name} ${0:dispatch-fn})
+	(defmacro ${1:name} [${2:arg-list}]
+	  ${0})
 snippet defn
 	(defn ${1:name} [${3:arg-list}]
 		${0})
