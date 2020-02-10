@@ -5,6 +5,11 @@ snippet cl
 snippet defm
 	(defmethod ${1} ${2} [${3}]
 		${0})
+snippet defcs
+	(rum/defcs ${1} < rum/reactive mix/reading mix/dispatching
+	  [component system${2}]
+		(let [{:keys [dispatch subscribe]} component]
+		  ${0}))
 snippet defmm
 	(defmulti ${1} ${0})
 snippet defma
