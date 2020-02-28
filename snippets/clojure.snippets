@@ -10,6 +10,10 @@ snippet defcs
 	  [component system${2}]
 		(let [{:keys [dispatch subscribe]} component]
 		  ${0}))
+snippet defha
+	(defmethod handle :${1} [{:keys [state]} [_ params]]
+		(let [{:keys [${2}]} params]
+		  ${0}))
 snippet defmm
 	(defmulti ${1} ${0})
 snippet defma
