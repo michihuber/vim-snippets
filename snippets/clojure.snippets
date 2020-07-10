@@ -14,6 +14,13 @@ snippet defha
 	(defmethod handle :${1} [{:keys [state]} [_ params]]
 		(let [{:keys [${2}]} params]
 		  ${0}))
+
+snippet ao
+	{:apply-ops [{:p [${1}] :set ${0}}]}
+
+snippet pv
+	{:p [${1}] :set ${2}}${0}
+
 snippet defmm
 	(defmulti ${1} ${0})
 snippet defma
